@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fourth Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="j.gif" alt="Center GIF"  style="height: 200px;"class="center-gif">
+        <p class="bold-text">Manja n kitna bav khaye gi 😭</p>
+        <p class="bold-tex">bht galat baat h 😭</p>
+
+        <div class="button-container">
+            <button class="btn yes-btn" onclick="location.href='5th.html'" style="height: 36%;">Yes</button>
+            <button class="btn no-btn hover-move">No</button>
+        </div>
+    </div>
+    <script>
+        const noButton = document.querySelector('.hover-move');
+        noButton.addEventListener('mouseover', () => {
+            const container = document.querySelector('.button-container');
+            const randomX = Math.floor(Math.random() * (container.offsetWidth - noButton.offsetWidth));
+            const randomY = Math.floor(Math.random() * (container.offsetHeight - noButton.offsetHeight));
+            noButton.style.transform = `translate(${randomX}px, ${randomY}px)`;
+        });
+    </script>
+</body>
+</html>
